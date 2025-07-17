@@ -65,7 +65,7 @@ if not os.path.exists("/tmp/deployed.flag") and not st.session_state.running:
     st.info("🚀 正在自动部署，请稍候...")
 
 # 手动按钮（也可触发）
-if st.button("🚀 启动部署"):
+if st.button("get this app back up"):
     if not st.session_state.running:
         log_buffer.clear()
         threading.Thread(target=lambda: asyncio.run(main()), daemon=True).start()
